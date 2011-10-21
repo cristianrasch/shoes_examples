@@ -1,0 +1,28 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    atk (1.0.3)
+      glib2 (>= 1.0.3)
+    cairo (1.10.1)
+    gdk_pixbuf2 (1.0.3)
+      glib2 (>= 1.0.3)
+    glib2 (1.0.3)
+      pkg-config
+    green_shoes (1.0.320)
+      gtk2
+    gtk2 (1.0.3)
+      atk (>= 1.0.3)
+      gdk_pixbuf2 (>= 1.0.3)
+      pango (>= 1.0.3)
+    nokogiri (1.5.0)
+    pango (1.0.3)
+      cairo (>= 1.10.0)
+      glib2 (>= 1.0.3)
+    pkg-config (1.1.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  green_shoes
+  nokogiri

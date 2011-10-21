@@ -8,7 +8,7 @@ Barometer.config = { 1 => [:google], 2 => :yahoo }
 DEFAULT_LOCATION = "Buenos Aires, Argentina"
 REFRESH_FREQUENCY = 30*60
 
-Shoes.app(:size => "800x600") do
+Shoes.app(title: "Weather Gadget", size: "800x600", resizable: false) do
   background "background.png"
   
   def update_weather_report
@@ -16,7 +16,7 @@ Shoes.app(:size => "800x600") do
     
     begin
       barometer = Barometer.new(location)
-      @weather = barometer.measure(true)
+      @weather = barometer.measure(metric = true)
       
       @weather_title.text = weather_title
       @weather_subtitle.text = weather_subtitle
@@ -49,10 +49,8 @@ Shoes.app(:size => "800x600") do
       button("Update") { update_weather_report }
     end
     
-    flow do
-      @weather_title = title
-      @weather_subtitle = subtitle
-    end
+    @weather_title = title
+    @weather_subtitle = subtitle
     tagline "Forecast:"
     @weather_forecast = stack
   end
