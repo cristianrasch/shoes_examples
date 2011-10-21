@@ -1,0 +1,6 @@
+source "http://rubygems.org"
+
+gem "green_shoes"
+gem "barometer"
+# gem "yahoo_weatherman"
+
